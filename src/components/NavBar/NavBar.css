@@ -1,0 +1,13 @@
+.text-logo {
+    font-size: 35px;
+}
+
+.navigation-design {
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+}
+
+.navigation-design:hover {
+    color: #DC3545;
+}
