@@ -1,28 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { stripHtmlFormQuestion } from '../../utilities/stripHtmlFromQuestion';
 import Option from '../Option/Option';
 import './Questions.css';
+import { EyeIcon } from '@heroicons/react/24/solid';
 
 const Questions = ({ singleQuestion, index }) => {
 
-    // console.log(singleQuestion);
+    const [rightAnswer, setRightAnswer] = useState('');
+    const { id, question, options, correctAnswer } = singleQuestion;
 
-    const {id, question, options} = singleQuestion;
+    const handleRightAnswer = (id) => {
+        if(id === singleQuestion.id){
+            setRightAnswer(singleQuestion.correctAnswer);
+        } 
+    }
 
-    // console.log(options)
-    
+
     return (
         <div className="question-container py-4 mb-3 bg-danger text-white">
-            <h3 className="text-start question">{`${index + 1}. ${stripHtmlFormQuestion(question)}`}</h3>
+            <div className="d-flex align-items-center justify-content-between">
+                <h3 className="text-start question">{`${index + 1}. ${stripHtmlFormQuestion(question)}`}</h3>
+                <div>
+                    <EyeIcon onClick={() => handleRightAnswer(id)} className="answer-visible"></EyeIcon>
+                </div>
+            </div>
             {/* <Option options={options}></Option> */}
-            {
-                options.map((option, idx) => <Option
-                    key={idx}
-                    option={option}
-                    index={idx}
-                    questionId={id}
-                ></Option>)
-            }
+            <div>
+                {
+                    options.map((option, idx) => <Option
+                        key={idx}
+                        option={option}
+                        index={idx}
+                        questionId={id}
+                        correctAnswer={correctAnswer}
+                    ></Option>)
+                }
+            </div>
+            <div>
+                <p className="right-answer fs-5 rounded bg-success w-75 mx-auto py-2">{rightAnswer}</p>
+            </div>
         </div>
     );
 };
