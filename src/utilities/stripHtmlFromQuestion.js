@@ -8,4 +8,4 @@ const stripHtmlFormQuestion = (question) => {
 
 };
 
-export {stripHtmlFormQuestion};
+export { stripHtmlFormQuestion };

@@ -1,13 +1,8 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { technologiesDataLoader } from '../../loaders/technologiesDataLoader';
 import Technology from '../Technology/Technology';
 import './Technologies.css';
 
 const Technologies = ({ technologies }) => {
-
-
-    console.log(technologies);
 
     return (
         <div className="technologies-container">
