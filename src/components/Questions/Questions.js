@@ -5,20 +5,24 @@ import './Questions.css';
 
 const Questions = ({ singleQuestion, index }) => {
 
-    const {question, options} = singleQuestion;
+    // console.log(singleQuestion);
+
+    const {id, question, options} = singleQuestion;
+
+    // console.log(options)
     
     return (
-        <div className="question-container bg-danger text-white">
+        <div className="question-container py-4 mb-3 bg-danger text-white">
             <h3 className="text-start question">{`${index + 1}. ${stripHtmlFormQuestion(question)}`}</h3>
-            <Option options={options}></Option>
-            {/* {
+            {/* <Option options={options}></Option> */}
+            {
                 options.map((option, idx) => <Option
                     key={idx}
                     option={option}
                     index={idx}
+                    questionId={id}
                 ></Option>)
-            } */}
-            {/*   */}
+            }
         </div>
     );
 };

@@ -5,21 +5,13 @@ import Questions from '../Questions/Questions';
 const Quiz = () => {
 
     const quizQuestionObj = useLoaderData();
-    const quizQuestions = quizQuestionObj.data.questions;
-
-    // console.log(quizQuestions);
-
-
-    // const { correctAnswer, question, options } = quizQuestion;
-
-    // console.log(correctAnswer, question, options)
-
-
+    const {name, questions, } = quizQuestionObj.data;
 
     return (
         <div>
+            <h2 className="my-4 fs-1">{name} Quiz</h2>
             {
-                quizQuestions.map((singleQuestion, idx) => <Questions
+                questions.map((singleQuestion, idx) => <Questions
                     key={singleQuestion.id}
                     singleQuestion={singleQuestion}
                     index={idx}
