@@ -2,9 +2,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Option.css';
 
-const customId = "removeToastDuplicate";
-
-
 const Option = ({ option, questionId, correctAnswer }) => {
 
     // const [toast, setToast] = useState('');
@@ -15,24 +12,25 @@ const Option = ({ option, questionId, correctAnswer }) => {
         if (option === correctAnswer) {
             toast.success("Right Answer", {
                 theme: "colored",
-                toastId: customId
             });
         }
         else {
             toast.error("Wrong Answer", {
                 theme: 'colored',
-                toastId: customId
             });
         }
     }
 
     return (
         <div>
-            <label onClick={() => handleAnswer(option)} className="option-label bg-light w-75 my-2 mx-auto text-start rounded px-2 py-3">
-                <input className="me-2" type="radio" name={questionId} value={option} />
+            <label className="option-label bg-light w-75 my-2 mx-auto text-start rounded px-2 py-3">
+                <input onClick={() => handleAnswer(option)} className="me-2" type="radio" name={questionId} value={option} />
                 {option}
+                <ToastContainer></ToastContainer>
             </label>
-            <ToastContainer></ToastContainer>
+            <div>
+                
+            </div>
 
         </div>
     );

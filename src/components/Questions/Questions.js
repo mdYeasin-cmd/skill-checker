@@ -37,7 +37,7 @@ const Questions = ({ singleQuestion, index }) => {
                 }
             </div>
             <div>
-                <p className="right-answer fs-5 rounded bg-success w-75 mx-auto py-2">{rightAnswer}</p>
+                <p className={`right-answer fs-5 rounded bg-success w-75 mx-auto py-2 ${rightAnswer ? 'd-block' : 'd-none'}`}>{rightAnswer}</p>
             </div>
         </div>
     );
