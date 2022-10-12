@@ -10,7 +10,7 @@ const Technologies = ({ technologies }) => {
     console.log(technologies);
 
     return (
-        <div className="technologies-container py-5">
+        <div className="technologies-container">
             <h2 className="text-danger technologies-title mb-5">Technologies</h2>
             <div className='container'>
                 <div className="row row-cols-1 row-cols-md-4 g-4">
