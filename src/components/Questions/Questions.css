@@ -1,0 +1,11 @@
+.question-container {
+    background-color: rebeccapurple;
+    width: 60%;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+}
+
+.question {
+    padding: 20px;
+    font-size: 22px;
+}
