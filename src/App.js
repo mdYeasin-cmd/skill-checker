@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 import Statistics from './components/Statistics/Statistics';
 import Main from './layouts/Main';
+import { technologiesDataLoader } from './loaders/technologiesDataLoader';
 
 function App() {
 
@@ -15,10 +16,12 @@ function App() {
       children: [
         {
           path: '/',
+          loader: technologiesDataLoader,
           element: <Home></Home>
         },
         {
           path: '/home',
+          loader: technologiesDataLoader,
           element: <Home></Home>
         },
         {

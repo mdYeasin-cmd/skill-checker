@@ -1,0 +1,29 @@
+.img-bg {
+    background-color: rgba(220, 53, 69, 0.5);
+}
+
+.react-bg {
+    background-color: #282C34;
+}
+
+.css-bg {
+    background-color: #32B3ED;
+}
+
+.github-bg {
+    background-color: #131619;
+}
+
+.technology-name {
+    font-size: 25px;
+}
+
+.quiz-btn {
+    border: none;
+    background-color: rgba(220, 53, 69, 0.8);
+    transition: all 0.2s linear;
+}
+
+.quiz-btn:hover {
+    background-color: #DC3545;
+}
