@@ -7,7 +7,6 @@ import Technologies from '../Technologies/Technologies';
 const Home = () => {
 
     const technologies = useLoaderData();
-    
 
     return (
         <div>

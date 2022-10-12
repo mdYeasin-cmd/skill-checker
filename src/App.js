@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
 import Home from './components/Home/Home';
-import NavBar from './components/NavBar/NavBar';
 import NotFound from './components/NotFound/NotFound';
 import Quiz from './components/Quiz/Quiz';
 import Statistics from './components/Statistics/Statistics';

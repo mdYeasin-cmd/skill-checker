@@ -14,7 +14,7 @@ const Banner = () => {
                             <h3 className="banner-question">Are you curious to check your skill level?</h3>
                             <h3 className="fw-normal banner-answer fw-semibold">If the answer is yes this is the write place for you to check yoour skill.</h3>
                         </div>
-                            
+
                     </div>
                 </div>
             </div>
